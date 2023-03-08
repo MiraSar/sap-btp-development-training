@@ -1,0 +1,39 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "cds watch",
+      "command": "cds",
+      "args": [
+        "watch"
+      ],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "cds run",
+      "command": "cds",
+      "args": [
+        "run",
+        "--with-mocks",
+        "--in-memory?"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "type": "deploy-mta",
+      "label": "deploy-mta: Template: Deploy cap-library-app/mta_archives/cap-library-app_1.0.0.mtar",
+      "taskType": "Deploy",
+      "mtarPath": "/home/user/projects/cap-library-app/mta_archives/cap-library-app_1.0.0.mtar",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
